@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Star notary DAPP</title>
+    <script src="index.js"></script>
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+  </style>
+  <body>
+    <h1>Star notary</h1>
+    <br><label for="name">Star name:</label><h3 id="name">Star name: </h3>
+    <br><br><button onclick="App.starName()">Get star name</button>
+    <hr>
+    <br><label for="owner">Star owner:</label><h3 id="owner">Star owner: </h3>
+    <br><br><button onclick="App.starOwner()">Get star owner</button>
+    <br><br>
+    <hr>
+    <br>
+      <h1>Claim star</h1>
+      <br><br><button id="claimStar" onclick="App.claimStar()">Claim a star</button>
+      <br><br>
+      <br>
+      <hr>
+        <span id="status"></span>
+      <br>
+  </body>
+</html>
