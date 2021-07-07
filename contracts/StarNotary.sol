@@ -12,6 +12,6 @@ contract StarNotary {
 
     function claimStar() public {
         starOwner = msg.sender;
-        emit startClaimed(msg.sender);
+        emit startClaimed(msg.sender); // This lets us know that a transaction is coming
     }
 }

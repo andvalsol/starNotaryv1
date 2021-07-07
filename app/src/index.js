@@ -3,7 +3,7 @@ import {default as contract} from "truffle-contract"
 
 import StarNotaryArtifact from "../../build/contracts/StarNotary.json"
 
-
+// Compile the JSON version of the contract into a contract again
 const StarNotary = contract(StarNotaryArtifact)
 
 let accounts
@@ -32,6 +32,7 @@ const claimStar = async () => {
 
 const App = {
     start: async function () {
+        // Destructure web3 from this
         const {web3} = this;
 
         StarNotary.setProvider(web3.currentProvider) // Provider is how the web 3 talks to the Blockchain
@@ -48,6 +49,7 @@ const App = {
             }
 
             accounts = accs
+            account = accounts[0] // We need to set the default account
         })
     },
 
